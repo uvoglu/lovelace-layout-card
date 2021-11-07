@@ -75,14 +75,14 @@ export class BaseColumnLayout extends BaseLayout {
         --column-width: ${column_width}px;
         --column-widths: ${this._config.layout?.column_widths ?? "none"};
       }
-      @media (max-width: ${column_max_width}px) {
-        .column:first-child > * {
-          margin-left: 0;
-        }
-        .column:last-child > * {
-          margin-right: 0;
-        }
-      }
+      // @media (max-width: ${column_max_width}px) {
+      //   .column:first-child > * {
+      //     margin-left: 0;
+      //   }
+      //   .column:last-child > * {
+      //     margin-right: 0;
+      //   }
+      // }
       @media (max-width: ${column_two_width - 1}px) {
         .column {
           --column-max-width: ${column_two_width}px;
@@ -210,6 +210,9 @@ export class BaseColumnLayout extends BaseLayout {
         .column > * {
           display: block;
           margin: var(--masonry-view-card-margin, 4px 4px 8px);
+        }
+        .column > hui-markdown-card {
+          margin: var(--mardown-card-margin, 4px 4px 8px);
         }
       `,
     ];

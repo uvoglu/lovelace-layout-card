@@ -132,7 +132,7 @@ class GridLayout extends BaseLayout {
           justify-content: stretch;
         }
         #root > * {
-          margin: var(--masonry-view-card-margin, 4px 4px 8px);
+          margin: var(--grid-view-card-margin, 4px 4px 8px);
         }
       `,
     ];
